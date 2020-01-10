@@ -1,100 +1,98 @@
-@charset utf-8;
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&display=swap');
-
 /* CSS*/
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{
-    margin:0;
-    padding:0;
-    border:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
+* {
+    font-family: 'Poppins', 'Spoqa Han Sans', sans-serif !important;
+}
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
     box-sizing: border-box;
 }
 
-body{
-    font-family:Poppins,Noto Sans KR,Sans-serif;
-    line-height:1;
-    /*background:#11172f;*/
-    background:#fbd3d3;
-    box-sizing: border-box;
+body {
+    line-height: 1;
+    background: #f3c6bd;
 }
 
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
-    display:block;
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    display: block;
 }
 
-nav ul, li{
-    list-style:none;
+nav ul, li {
+    list-style: none;
 }
 
-a{
-    margin:0;
-    padding:0;
-    font-size:100%;
-    text-decoration:none;
-    vertical-align:baseline;
-    color:#fff;
-    background:transparent;
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    text-decoration: none;
+    vertical-align: baseline;
+    color: #fff;
+    background: transparent;
 }
 
-img{
-    vertical-align:top;
+img {
+    vertical-align: top;
 }
 
-table{
-    border-collapse:collapse;
-    border-spacing:0;
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
-input{
-    margin:0;
-    padding:0;
-    box-sizing:content-box;
-    vertical-align:top;
-    appearance:none;
-    border:1px solid #e65d5d;
-    color:#e65d5d;
-    border-radius:0;
-    font-family:Poppins,Noto Sans KR,Sans-serif;
+input {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    vertical-align: top;
+    appearance: none;
+    border: 1px solid #e65d5d;
+    color: #e65d5d;
+    border-radius: 0;
+    font-family: Poppins,Noto Sans KR,Sans-serif;
 }
 
-input::-moz-input-placeholder{
-    color:#e65d5d;
+input::-moz-input-placeholder {
+    color: #e65d5d;
 }
 
 input::-webkit-input-placeholder {
-    color:#e65d5d;
+    color: #e65d5d;
 }
 
+.hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    left: -9999px;
+    color: transparent;
+}
 
-#wrap{
+#wrap {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
-
-header{
-    width:100%;
-    height:80px;
-    position: fixed;
-    top:0;
-    left: 0;
-    background: #fbd3d3;
-    /*box-shadow: 8px 8px 9px rgba(0,0,0,0.2);*/
-    z-index:999;
+.main {
+    position: relative;
+    width: 100%;
 }
 
-#menu-overlay{
+#menu-overlay {
     position: fixed;
-    top:0;
+    top: 0;
     left: 0;
     right: 0;
-    bottom:0;
+    bottom: 0;
     background: #3f6fdf;
     display: flex;
     justify-content: center;
@@ -103,35 +101,42 @@ header{
     transform: scale(0);
     transition: .5s;
 }
-#menu-overlay.active{
+
+#menu-overlay.active {
     transform: scale(1);
+    z-index: 999;
 }
-#menu-overlay ul{
+
+#menu-overlay ul {
     position: relative;
 }
-#menu-overlay ul li{
+
+#menu-overlay ul li {
     position: relative;
     list-style: none;
     text-align: center;
     display: block;
 }
-#menu-overlay ul li + li{
-    margin-top:10px;
+
+#menu-overlay ul li + li {
+    margin-top: 12%;
 }
+
 #menu-overlay ul li a {
     position: relative;
     text-decoration: none;
-    font-size: 3.5em;
+    font-size: 5vw;
     padding: 0 10px;
     font-weight: 700;
     text-transform: uppercase;
     display: inline-block;
     color: #ffffff;
 }
-#menu-overlay ul li a::before{
+
+#menu-overlay ul li a::before {
     content: '';
     position: absolute;
-    top:50%;
+    top: 50%;
     left: 0;
     width: 100%;
     height: 8px;
@@ -140,37 +145,42 @@ header{
     transform-origin: right;
     transition: .5s transform;
 }
-#menu-overlay ul li a:hover::before{
+
+#menu-overlay ul li a:hover::before {
     transform: translateY(-50%) scaleX(1);
     transform-origin: left;
     transition: .5s transform;
 }
-#toggleIcon{
+
+#toggleIcon {
     position: fixed;
-    top:20px;
+    top: 20px;
     right: 20px;
-    width:50px;
-    height:50px;
-    z-index: 1;
+    width: 50px;
+    height: 50px;
+    z-index: 1000;
     cursor: pointer;
 }
 
-#toggleIcon span{
+#toggleIcon span {
     width: 62%;
-    background: #333;
+    background: #fff;
     height: 5px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     transition: .5s;
 }
-#toggleIcon span:nth-child(1){
+
+#toggleIcon span:nth-child(1) {
     top: 25%;
 }
-#toggleIcon span:nth-child(2){
+
+#toggleIcon span:nth-child(2) {
     top: 45%;
 }
-#toggleIcon span:nth-child(3){
+
+#toggleIcon span:nth-child(3) {
     top: 65%;
 }
 
@@ -186,24 +196,17 @@ header{
     left: 40%;
 }
 
-#toggleIcon.active span:nth-child(3){
-    display:none;
+#toggleIcon.active span:nth-child(3) {
+    display: none;
 }
 
-main{
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-}
-
-#wrap .bg{
+#wrap .bg {
     position: relative;
     width: 100%;
     min-height: 100vh;
 }
 
-#wrap .blob.one{
+#wrap .blob.one {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -212,19 +215,19 @@ main{
     height: 64vw;
     /*background: rgb(241,88,254);
     background: linear-gradient(125deg, rgba(241,88,254,1) 0%, rgba(89,83,255,1) 100%);*/
-    background:#fbebe3;
+    background: #ffd7cf;
     animation: animate 5s linear infinite;
     z-index: 8;
     opacity: 0.8;
 }
 
-#wrap .blob.two{
+#wrap .blob.two {
     position: absolute;
     width: 26vw;
     height: 28vh;
     /*background: rgb(255,86,244);
     background: linear-gradient(125deg, rgba(255,86,244,1) 0%, rgba(255,54,63,1) 100%);*/
-    background:#f39b3b;
+    background: #ff7746;
     animation: animate2 5s linear infinite;
     top: 50%;
     left: 50%;
@@ -232,13 +235,13 @@ main{
     z-index: 11;
 }
 
-#wrap .blob.three{
+#wrap .blob.three {
     position: absolute;
     width: 16vw;
     height: 27vh;
     /*background: rgb(37,239,251);
     background: linear-gradient(125deg, rgba(37,239,251,1) 0%, rgba(31,245,131,1) 100%);*/
-    background:#3f6fdf;
+    background: #3f6fdf;
     animation: animate3 5s linear infinite;
     top: 50%;
     left: 50%;
@@ -247,51 +250,60 @@ main{
 }
 
 @keyframes animate {
-    0%,100%{
+    0%,100% {
         border-radius: 60% 30% 20% 70% / 50% 50% 40% 40%;
     }
-    25%{
+
+    25% {
         border-radius: 73% 27% 26% 38% / 73% 36% 64% 27%;
     }
-    50%{
+
+    50% {
         border-radius: 28% 72% 44% 56% / 49% 40% 60% 51%;
     }
-    75%{
+
+    75% {
         border-radius: 40% 60% 70% 30% / 47% 62% 38% 53%;
     }
 }
 
 @keyframes animate2 {
-    0%,100%{
+    0%,100% {
         border-radius: 73% 27% 26% 38% / 73% 36% 64% 27%;
     }
-    25%{
+
+    25% {
         border-radius: 64% 36% 27% 73% / 55% 58% 42% 45%;
     }
-    50%{
+
+    50% {
         border-radius: 40% 60% 70% 30% / 47% 62% 38% 53%;
     }
-    75%{
+
+    75% {
         border-radius: 28% 72% 44% 56% / 49% 40% 60% 51%;
     }
 }
 
 @keyframes animate3 {
-    0%,100%{
+    0%,100% {
         border-radius: 40% 60% 70% 30% / 47% 62% 38% 53%;
     }
-    25%{
+
+    25% {
         border-radius: 28% 72% 44% 56% / 49% 40% 60% 51%;
     }
-    50%{
+
+    50% {
         border-radius: 73% 27% 26% 38% / 73% 36% 64% 27%;
     }
-    75%{
+
+    75% {
         border-radius: 64% 36% 27% 73% / 55% 58% 42% 45%;
     }
 }
 
-.mainText{
+.mainText {
     color: #fff;
     font-size: 9vw;
     text-align: left;
@@ -303,10 +315,10 @@ main{
     width: auto;
     height: auto;
     transform: translate(-50%, -50%);
-    /* font-family:Poppins,Sans-serif; */
+    font-weight: bold;
 }
 
-.bg .ver{
+.bg .ver {
     color: rgba(255,255,255,0.5);
     font-size: 2rem;
     position: absolute;
@@ -314,7 +326,7 @@ main{
     bottom: 5%;
 }
 
-.bg .ver span{
+.bg .ver span {
     width: 50px;
     height: 3px;
     background: rgba(255,255,255,0.5);
@@ -323,21 +335,311 @@ main{
     margin-right: 18px;
 }
 
-.bgDot span{
+.bgDot span {
     border: 13px solid #050c27;
     opacity: .8;
 }
-.bgDot .one{
+
+.bgDot .one {
     position: absolute;
     width: 33vw;
     height: 49vh;
     right: -13%;
     top: -5%;
 }
-.bgDot .two{}
 
-
-/*mobile*/
-@media (min-width: 481px) and (max-width: 767px) {
-
+.bgDot .two {
 }
+
+.contents {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 7vh 0;
+}
+
+.textEffect {
+    display: flex;
+    overflow: hidden;
+    padding: 0 0 5vh 0;
+}
+
+#text {
+    position: relative;
+    font-size: 7vw;
+    color: #fff;
+    font-weight: bold;
+}
+
+#text span {
+    color: #3f6fdf;
+    border-bottom: 12px solid #3f6fdf;
+    display: none;
+}
+
+.contents .section + .section {
+    margin: 10vh 0 0 0;
+}
+
+.work {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.work .box {
+    position: relative;
+    height: 300px;
+    background: #fff;
+    display: flex;
+    width: 45%;
+    margin: 10% 0 0 0;
+    border-radius: 2rem;
+}
+
+.work .box .img-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f6f2ed;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0px 17px 10px rgba(25, 25, 25, 0.05);
+    border-radius: 2rem;
+}
+
+.work .box:hover .img-box {
+    width: 150px;
+    height: 150px;
+    left: -75px;
+    top: calc(50% - 75px);
+    transition: 0.5s ease-in-out;
+    background: #f36b7f;
+}
+
+.work .box .img-box:before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 6em;
+    color: rgba(243, 198, 189,0.5);
+}
+
+.work .box .img-box img {
+    max-width: 100px;
+    transition: 0.5s ease-in-out;
+}
+
+.work .box:hover .img-box img {
+    max-width: 75px;
+}
+
+.work .box .con {
+    position: absolute;
+    right: 0;
+    width: calc(100% - 75px);
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.work .box .con h2 {
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.work .box .con a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #333;
+    text-decoration: none;
+    color: #fff;
+}
+
+/*footer*/
+.foot-text {
+    background: #e4a598;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: rgba(255,255,255,0.7);
+    font-size: 15px;
+    border-top: 1px solid #f3c6bd;
+}
+
+.add-info {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 22vh;
+}
+
+.add-info .today-date {
+    width: 25%;
+    float: left;
+}
+
+.date-area {
+    font-size: 3rem;
+    color: rgba(255,255,255,0.5);
+    text-align: right;
+    line-height: 1.2;
+    padding-top: 4vh;
+}
+
+.date-area .this-text {
+    font-weight: bold;
+}
+
+.foot-info {
+    background: #e4a598;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 5vh 0;
+}
+
+.foot-info .row {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.foot-info .foot-sub {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #ecbbb1;
+}
+
+.foot-info .root_daum_roughmap {
+    margin: 5% 0 0 0;
+    padding: 2%;
+    background: #f3c6bd;
+    width: 100% !important;
+    border: none;
+}
+
+.foot-info .form .form-elements {
+    width: 100%;
+    margin: 5% 0 0 0;
+}
+
+.foot-info .form .form-elements .pure-group {
+    padding:0;
+}
+
+.foot-info .form .form-elements .pure-group + .pure-group{
+    padding: 2% 0 0 0;
+}
+
+.foot-info .form .form-elements .pure-group input {
+    width: 100%;
+    background: rgb(228, 165, 152);
+    box-shadow: none;
+    border: 1px solid #f3c6bd;
+    color: #222;
+    padding: 3%;
+}
+
+.foot-info .form .form-elements .pure-group textarea {
+    width: 100%;
+    background: rgb(228, 165, 152);
+    box-shadow: none;
+    border: 1px solid #f3c6bd;
+    color: #222;
+    padding: 3%;
+}
+
+.foot-info .form .form-elements button {
+    width: 100%;
+    margin: 2% 0 0 0;
+    background: #f3c6bd;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.foot-info .form .form-elements .pure-group input::placeholder,
+.foot-info .form .form-elements .pure-group textarea::placeholder {
+    color: #f3c6bd;
+}
+
+.foot-info .form .thankyou_message{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #fff;
+    font-size: 2.5vw;
+    width: 100%;
+}
+
+#today-date {
+    font-size: 5rem;
+}
+
+@media (max-width: 992px) {
+    .work {
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .work .box {
+        width: 400px;
+    }
+
+    #menu-overlay ul li a{
+        font-size:10vw
+    }
+}
+
+
+@media (max-width: 768px) {
+    .work .box {
+        max-width:300px;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .work .box .img-box {
+        position: relative;
+    }
+
+    .work .box .img-box, .work .box:hover .img-box {
+        width: 100%;
+        height: 200px;
+        left: 0;
+    }
+
+    .work .box .img-box img, .work .box:hover .img-box img {
+        max-width: 100%;
+    }
+
+    .work .box .con {
+        position: relative;
+        width: 100%;
+    }
+
+    .foot-info .map{
+        display:none;
+    }
+}
+

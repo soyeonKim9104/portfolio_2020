@@ -1,52 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>2020 - KIM SO YEON</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700|Poppins&display=swap" rel="stylesheet">
+    <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=e9b1c8f3093c8f030bda48e091ab5f4f"></script>
 </head>
-<body>
-    <div id="wrap">
-        <header>
-            <h1 class="logo"></h1>
-            <!--<nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About me</a></li>
-                    <li><a href="#">Work</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>-->
-            <div id="toggleIcon" onclick="menuToggle()">
-                <span></span>
-                <span></span>
-                <span></span>
+
+
+<body class="main">
+<h1 class="hidden">Kim So Yeon - 2020</h1>
+
+<div id="toggleIcon" onclick="menuToggle()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<div id="menu-overlay">
+    <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="../index.html">about me</a></li>
+        <li><a href="../index.html">portfolio</a></li>
+        <li><a href="../index.html">contact</a></li>
+    </ul>
+</div>
+
+<div id="wrap">
+    <div class="main">
+        <div class="bg">
+            <h2 class="mainText">Impressive and limitless</h2>
+            <div class="blob one"></div>
+            <div class="blob two"></div>
+            <div class="blob three"></div>
+            <div class="ver"><span></span>2020</div>
+            <!--<div class="bgDot">
+                <span class="one"></span>
+                <span class="two"></span>
+            </div>-->
+        </div>
+        <div class="contents">
+            <div id="sec-1" class="section">
+                <div class="work">
+                    <div class="box">
+                        <div class="img-box" data-text="DDanzi">
+                        </div>
+                        <div class="con">
+                            <div>
+                                <h2>DDanzi</h2>
+                                <p>Your interest inspires me. Your interest inspires me. Your interest inspires me. Your interest inspires me.</p>
+                                <a href="#">detail view</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="img-box" data-text="Remarkbill">
+                        </div>
+                        <div class="con">
+                            <div>
+                                <h2>Remarkbill</h2>
+                                <p>Your interest inspires me. Your interest inspires me. Your interest inspires me. Your interest inspires me.</p>
+                                <a href="#">detail view</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="img-box" data-text="interMd">
+                        </div>
+                        <div class="con">
+                            <div>
+                                <h2>interMd</h2>
+                                <p>Your interest inspires me. Your interest inspires me. Your interest inspires me. Your interest inspires me.</p>
+                                <a href="#">detail view</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box">
+                        <div class="img-box" data-text="ASUS">
+                        </div>
+                        <div class="con">
+                            <div>
+                                <h2>ASUS</h2>
+                                <p>Your interest inspires me. Your interest inspires me. Your interest inspires me. Your interest inspires me.</p>
+                                <a href="#">detail view</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            <div id="menu-overlay">
-                <ul>
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="../index.html">about me</a></li>
-                    <li><a href="../index.html">portfolio</a></li>
-                    <li><a href="../index.html">contact</a></li>
-                </ul>
+            <div id="sec-2" class="section">
+
             </div>
-        </header>
-        <main>
-            <div class="bg">
-                <h2 class="mainText">Impressive and limitless</h2>
-                <div class="blob one"></div>
-                <div class="blob two"></div>
-                <div class="blob three"></div>
-                <div class="ver"><span></span>2020</div>
-                <!--<div class="bgDot">
-                    <span class="one"></span>
-                    <span class="two"></span>
-                </div>-->
-            </div>
-        </main>
+        </div>
     </div>
+</div>
+
+<div id="footer">
+    <div class="add-info">
+        <div class="textEffect col-xs-12 col-sm-6 col-md-8">
+            <h3 id="text">I'm
+                <span style="display: initial">so yeon</span>
+                <span>smart</span>
+                <span>young</span>
+                <span>good</span>
+                <span>healthy</span>
+                <span>perfect</span>
+                <span>creative</span>
+            </h3>
+        </div>
+        <div class="date-area col-xs-6 col-md-4">
+            <div class="this-text">현재시각은?</div>
+            <div id="today-date"></div>
+        </div>
+    </div>
+    <div class="foot-info">
+        <div class="row">
+            <div class="form col-xs-12 col-md-6">
+                <div class="foot-sub">Wait for your comments_</div>
+                <form class="gform pure-form pure-form-stacked" method="POST" data-email="soyean7979@gmail.com" action="https://script.google.com/macros/s/AKfycbwihpQRoPtWcFvG5vbHkkv8mTZOHYCE1Gd3f--oww/exec">
+                    <div class="form-elements">
+                        <fieldset class="pure-group">
+                            <label for="name" class="hidden">name: </label>
+                            <input id="name" name="name" placeholder="이름을 적어주세요." />
+                        </fieldset>
+
+                        <fieldset class="pure-group">
+                            <label for="message" class="hidden">Message: </label>
+                            <textarea id="message" name="message" rows="10" placeholder="저에게 코멘트를 보내주세요."></textarea>
+                        </fieldset>
+
+                        <fieldset class="pure-group">
+                            <label for="email" class="hidden">Your Email Address:</label>
+                            <input id="email" name="email" type="email" value="" required placeholder="메일을 남겨주세요."/>
+                        </fieldset>
+
+                        <button class="button-success pure-button button-xlarge">보내기 클릭!</button>
+                    </div>
+                    <!-- Customise the Thank you Message People See when they submit the form: -->
+                    <div class="thankyou_message" style="display:none;">
+                        <h2><p>Thanks</p> for contacting us! We will get back to you soon!</h2>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xs-12 col-md-6 map">
+                <div class="foot-sub">I live in Seoul,<br/>Korea_</div>
+                <div id="daumRoughmapContainer1578385130452" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="foot-text">2020 - Kim so yeon portfolio _ Thank you for watching my precious work<span class="phone"></span></div>
 
 <script src="js/jquery-1.10.2.min.js"></script>
 <script src="js/custom.js"></script>
+<!--map js-->
+<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+<script charset="UTF-8">
+    new daum.roughmap.Lander({
+        "timestamp" : "1578385130452",
+        "key" : "wij9",
+        "mapWidth" : "640",
+        "mapHeight" : "390"
+    }).render();
+</script>
+
+<!--email js-->
+<script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
 </body>
 </html>
