@@ -1,3 +1,4 @@
+
 /*fullscreen menu*/
 function menuToggle() {
     let nav = document.getElementById('menu-overlay');
@@ -23,7 +24,6 @@ function rotator() {
 setInterval(rotator, 900);
 
 /*today date*/
-
 function TodayTime(){
     let day = new Date();
     let hh = day.getHours();
@@ -38,3 +38,52 @@ function StartClock() {
     TodayTime();
 }
 StartClock();
+
+/*section counting*/
+function secCount() {
+    let secArea = document.querySelectorAll('.sec_num');
+    let secTotal = secArea.length;
+    let numberPrint = '';
+    for (let i = 0; i < secTotal; i++) {
+        numberPrint = i + 1;
+        if(i<9){
+            secArea[i].innerHTML = '0' + numberPrint;
+        }else{
+            secArea[i].innerHTML = numberPrint;
+        }
+    }
+}
+secCount();
+
+/*portfolio animation*/
+/*const delayPosition = 200;
+let windowHeight = window.innerHeight;
+
+window.addEventListener('resize',function () {
+    insertTargetPosition();
+});
+
+window.addEventListener('scroll',function () {
+    let position = window.scrollTop + windowHeight - delayPosition;
+    let boxYetArea = document.querySelectorAll('.box.ready');
+    let chkSection = boxYetArea.classList.contains('active');
+
+    for(let i = 0; i < boxYetArea.length; i++){
+        if(!chkSection && boxYetArea.offsetTop < position){
+            boxYetArea[i].classList.add('active');
+            boxYetArea[i].classList.remove('ready');
+        }
+    }
+});
+
+function insertTargetPosition() {
+    let boxArea = document.querySelectorAll('.box');
+
+    for(let i = 0; i < boxArea.length; i++){
+        boxArea[i].offsetTop;
+    }
+}
+
+(function init() {
+    insertTargetPosition();
+})();*/
