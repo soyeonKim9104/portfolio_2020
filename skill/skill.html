@@ -22,13 +22,85 @@
 
 <div id="skill">
     <div class="column">
-        <div class="career col-md-8"></div>
-        <div class="skill col-md-4"></div>
+        <div class="profile card col-md-3">
+            <div class="my-id"><img src="" alt="img"></div>
+            <div class="name">Kim So Yeon</div>
+            <div class="age">Front-end / 30</div>
+        </div>
+        <div class="skill card col-md-6">
+            <div class="col-md-6">
+                <div class="sec-title">framework skill</div>
+                <div class="skill-bar">
+                    <div class="progress-bar-container title-up small color">
+                        <div class="progress-bar" data-percent="100" data-delay="0" data-type="%">
+                            <div class="progress-title">HTML5</div>
+                        </div>
+                    </div>
+
+                    <div class="progress-bar-container title-up small color">
+                        <div class="progress-bar" data-percent="100" data-delay="100" data-type="%">
+                            <div class="progress-title">CSS3</div>
+                        </div>
+                    </div>
+
+                    <div class="progress-bar-container title-up small color">
+                        <div class="progress-bar" data-percent="60" data-delay="200" data-type="%">
+                            <div class="progress-title">Javascript</div>
+                        </div>
+                    </div>
+
+                    <div class="progress-bar-container title-up small color">
+                        <div class="progress-bar" data-percent="60" data-delay="200" data-type="%">
+                            <div class="progress-title">jQuery</div>
+                        </div>
+                    </div>
+
+                    <div class="progress-bar-container title-up small color">
+                        <div class="progress-bar" data-percent="60" data-delay="200" data-type="%">
+                            <div class="progress-title">Vue.js</div>
+                        </div>
+                    </div>
+
+                    <div class="progress-bar-container title-up small color">
+                        <div class="progress-bar" data-percent="60" data-delay="200" data-type="%">
+                            <div class="progress-title">react</div>
+                        </div>
+                    </div>
+
+                    <div class="progress-bar-container title-up small color">
+                        <div class="progress-bar" data-percent="89" data-delay="300" data-type="%">
+                            <div class="progress-title">Photoshop</div>
+                        </div>
+                    </div>
+
+                    <div class="progress-bar-container title-up small color">
+                        <div class="progress-bar" data-percent="75" data-delay="400" data-type="%">
+                            <div class="progress-title">Illustrator</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="sec-title">technical skill</div>
+            </div>
+        </div>
+        <div class="calendar card col-md-3">
+            <div id="app" style="display:none;">
+                <v-calendar title-position="left" :attributes='attrs'></v-calendar>
+                <!--<v-date-picker :mode='mode' v-model='selectedDate' />-->
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="career card col-md-12"></div>
     </div>
 </div>
 
 <div class="foot-text">2020 - Kim so yeon portfolio _ Thank you for watching my precious work<span class="phone"></span></div>
 <script src="../js/jquery-1.10.2.min.js"></script>
-<script src="../js/custom.js"></script>
+<script src="../js/functions.js"></script>
+<script src="../js/plugins.js"></script>
+<!--<script src='https://unpkg.com/vue/dist/vue.js'></script>-->
+
 </body>
 </html>
