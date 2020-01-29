@@ -23,71 +23,94 @@
 <div id="skill">
     <div class="column">
         <div class="profile card col-md-3">
-            <div class="my-id"><img src="" alt="img"></div>
-            <div class="name">Kim So Yeon</div>
-            <div class="age">Front-end / 30</div>
+            <div class="row">
+                <div class="my-id"><img src="../images/icon-me.png" alt="img"></div>
+                <div class="info">
+                    <div class="block">
+                        <p class="name">Kim So Yeon</p>
+                    </div>
+                    <div class="block">
+                        <p class="age">Front-end / 30</p>
+                    </div>
+                    <div class="box">
+                        <div class="ico"><i><img src="../images/icon-phone.png"></i> +82 10-2685-0404</div>
+                        <div class="ico"><i><img src="../images/icon-home.png"></i> Seoul Seodaemun-gu, Seoul 100</div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="skill card col-md-6">
-            <div class="col-md-6">
-                <div class="sec-title">framework skill</div>
-                <div class="skill-bar">
-                    <div class="progress-bar-container title-up small color">
-                        <div class="progress-bar" data-percent="100" data-delay="0" data-type="%">
-                            <div class="progress-title">HTML5</div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="sec-title">coding skill</div>
+                    <div class="skill-bar">
+                        <div class="progress-bar-container title-up small color">
+                            <div class="progress-bar" data-percent="98" data-delay="0" data-type="%">
+                                <div class="progress-title">HTML/CSS</div>
+                            </div>
+                        </div>
+
+                        <div class="progress-bar-container title-up small color">
+                            <div class="progress-bar" data-percent="75" data-delay="50" data-type="%">
+                                <div class="progress-title">Javascript</div>
+                            </div>
+                        </div>
+
+                        <div class="progress-bar-container title-up small color">
+                            <div class="progress-bar" data-percent="80" data-delay="100" data-type="%">
+                                <div class="progress-title">jQuery</div>
+                            </div>
+                        </div>
+
+                        <div class="progress-bar-container title-up small color">
+                            <div class="progress-bar" data-percent="40" data-delay="150" data-type="%">
+                                <div class="progress-title">Vue.js</div>
+                            </div>
+                        </div>
+
+                        <div class="progress-bar-container title-up small color">
+                            <div class="progress-bar" data-percent="10" data-delay="200" data-type="%">
+                                <div class="progress-title">react</div>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="progress-bar-container title-up small color">
-                        <div class="progress-bar" data-percent="100" data-delay="100" data-type="%">
-                            <div class="progress-title">CSS3</div>
+                </div>
+                <div class="col-md-6">
+                    <div class="sec-title">design & etc skill</div>
+                    <div class="skill-bar">
+                        <div class="progress-bar-container title-up small color">
+                            <div class="progress-bar" data-percent="96" data-delay="0" data-type="%">
+                                <div class="progress-title">Photoshop</div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="progress-bar-container title-up small color">
-                        <div class="progress-bar" data-percent="60" data-delay="200" data-type="%">
-                            <div class="progress-title">Javascript</div>
+                        <div class="progress-bar-container title-up small color">
+                            <div class="progress-bar" data-percent="75" data-delay="50" data-type="%">
+                                <div class="progress-title">Illustrator</div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="progress-bar-container title-up small color">
-                        <div class="progress-bar" data-percent="60" data-delay="200" data-type="%">
-                            <div class="progress-title">jQuery</div>
+                        <div class="progress-bar-container title-up small color">
+                            <div class="progress-bar" data-percent="35" data-delay="100" data-type="%">
+                                <div class="progress-title">After Effect</div>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="progress-bar-container title-up small color">
-                        <div class="progress-bar" data-percent="60" data-delay="200" data-type="%">
-                            <div class="progress-title">Vue.js</div>
-                        </div>
-                    </div>
-
-                    <div class="progress-bar-container title-up small color">
-                        <div class="progress-bar" data-percent="60" data-delay="200" data-type="%">
-                            <div class="progress-title">react</div>
-                        </div>
-                    </div>
-
-                    <div class="progress-bar-container title-up small color">
-                        <div class="progress-bar" data-percent="89" data-delay="300" data-type="%">
-                            <div class="progress-title">Photoshop</div>
-                        </div>
-                    </div>
-
-                    <div class="progress-bar-container title-up small color">
-                        <div class="progress-bar" data-percent="75" data-delay="400" data-type="%">
-                            <div class="progress-title">Illustrator</div>
+                        <div class="progress-bar-container title-up small color">
+                            <div class="progress-bar" data-percent="50" data-delay="150" data-type="%">
+                                <div class="progress-title">Microsoft</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="sec-title">technical skill</div>
-            </div>
         </div>
         <div class="calendar card col-md-3">
-            <div id="app" style="display:none;">
-                <v-calendar title-position="left" :attributes='attrs'></v-calendar>
-                <!--<v-date-picker :mode='mode' v-model='selectedDate' />-->
+            <div class="row">
+                <div id="app" style="display:none;">
+                    <v-calendar title-position="left" :attributes='attrs'></v-calendar>
+                    <!--<v-date-picker :mode='mode' v-model='selectedDate' />-->
+                </div>
             </div>
         </div>
     </div>

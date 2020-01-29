@@ -43,12 +43,16 @@ function rotator() {
 }
 setInterval(rotator, 900);
 
-/*today date*/
+/*today time*/
 function TodayTime(){
     let day = new Date();
     let hh = day.getHours();
     let mm = day.getMinutes();
-    document.getElementById('today-date').innerHTML = hh + ':' + mm;
+    if(mm < 10){
+        document.getElementById('today-date').innerHTML = hh + ':' + '0' + mm;
+    }else{
+        document.getElementById('today-date').innerHTML = hh + ':' + mm;
+    }
 }
 
 let timerId = null;

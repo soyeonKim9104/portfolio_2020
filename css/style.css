@@ -134,7 +134,7 @@ input::-webkit-input-placeholder {
     letter-spacing: 0.3rem;
 }
 
-#menu-overlay ul li a span{
+#menu-overlay ul li a span {
     font-size: 3rem;
 }
 
@@ -159,8 +159,8 @@ input::-webkit-input-placeholder {
 
 #toggleIcon {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 5%;
+    right: 3%;
     width: 50px;
     height: 50px;
     z-index: 1000;
@@ -325,6 +325,14 @@ input::-webkit-input-placeholder {
     bottom: 5%;
 }
 
+.bg .myName{
+    color: rgba(255,255,255,0.5);
+    font-size: 2rem;
+    position: absolute;
+    left: 4%;
+    top: 5%;
+}
+
 .bg .ver span {
     width: 50px;
     height: 3px;
@@ -435,9 +443,9 @@ input::-webkit-input-placeholder {
     text-align: center;
     color: rgba(255,255,255,0.7);
     font-size: 15px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .add-info {
@@ -471,7 +479,7 @@ input::-webkit-input-placeholder {
     width: 100%;
     overflow: hidden;
     position: relative;
-    padding: 5vh 0;
+    padding: 3% 0;
 }
 
 .foot-info .row {
@@ -687,11 +695,11 @@ sub page style start
     color: #666;
 }
 
-#workPlace, #skill{
+#workPlace, #skill {
     padding: 8% 0;
 }
 
-#workPlace .row, #skill{
+#workPlace .row, #skill {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -779,10 +787,10 @@ sub page style start
 }
 
 /* ----------------------------------------------------------------------
-	Progress Bar
+Progress Bar
 -------------------------------------------------------------------------*/
 /* ----------------------------------------------------------------------
-	Base Colors
+Base Colors
 -------------------------------------------------------------------------*/
 /*Colors*/
 /*Typography*/
@@ -792,115 +800,302 @@ sub page style start
 /*Transitions*/
 .progress-bar-container {
     width: 100%;
-    height: 40px;
-    margin: 20px 0 20px 0;
+    height: 10px;
+    margin: 7% 0;
     overflow: hidden;
-    background-color: #eee; }
+    background-color: #e4e4e4;
+    border-radius: 5px;
+}
 
 .progress-bar {
     height: 100%;
     padding: 10px;
     box-shadow: none;
-
 }
-.progress-bar .progress-number,
-.progress-bar .progress-type {
+
+.progress-bar .progress-number, .progress-bar .progress-type {
     color: #fff;
     float: right;
-    margin-top: -2px; }
+    margin-top: -2px;
+    font-size: 9px;
+}
 
 .progress-title {
     color: #fff;
-    font-size: 13px;
+    font-size: 9px;
     font-weight: normal;
     position: absolute;
     text-align: left;
 }
-.progress-title i {
-    margin-right: 8px; }
 
-.progress-bar-container.radius,
-.progress-bar-container.radius .progress-bar {
-    border-radius: 4px; }
+.progress-title i {
+    margin-right: 8px;
+}
+
+.progress-bar-container.radius, .progress-bar-container.radius .progress-bar {
+    border-radius: 4px;
+}
+
 .progress-bar-container.title-up .progress-title {
-    color: #fff;
+    color: #f3c6bd;
     margin-left: -10px;
     margin-top: -32px;
 }
+
 .progress-bar-container.title-up:not(:first-child) {
-    margin-top: 40px; }
-.progress-bar-container.title-up .progress-bar .progress-number,
-.progress-bar-container.title-up .progress-bar .progress-type {
-    color: #fff;
+    margin-top: 13.7%;
+}
+
+.progress-bar-container.title-up .progress-bar .progress-number, .progress-bar-container.title-up .progress-bar .progress-type {
+    color: #f3c6bd;
     margin-top: -32px;
     position: absolute;
     right: 15px;
 }
+
 .progress-bar-container.title-up .progress-bar .progress-number {
-    right: 26px; }
+    right: 26px;
+}
+
 .progress-bar-container.medium {
-    height: 20px; }
+    height: 20px;
+}
+
 .progress-bar-container.medium .progress-bar {
-    padding: 0; }
+    padding: 0;
+}
+
 .progress-bar-container.medium .progress-title {
     margin-left: 0;
-    margin-top: -20px; }
-.progress-bar-container.medium .progress-bar .progress-number,
-.progress-bar-container.medium .progress-bar .progress-type {
-    margin-top: -18px; }
+    margin-top: -20px;
+}
+
+.progress-bar-container.medium .progress-bar .progress-number, .progress-bar-container.medium .progress-bar .progress-type {
+    margin-top: -18px;
+}
+
 .progress-bar-container.small {
-    height: 15px; }
+    height: 6px;
+}
+
 .progress-bar-container.small .progress-bar {
     padding: 0;
-    background: #fee02a;
+    /*background: rgb(255,119,70);*/
+    /*background: linear-gradient(125deg, rgba(255,119,70,1) 0%, rgba(63,111,223,1) 100%);*/
+    background:#3f6fdf;
+    border-radius: 5px;
 }
+
 .progress-bar-container.small .progress-title {
     margin-left: 0;
-    margin-top: -24px; }
-.progress-bar-container.small .progress-bar .progress-number,
-.progress-bar-container.small .progress-bar .progress-type {
-    margin-top: -24px; }
+    margin-top: -22px;
+}
+
+.progress-bar-container.small .progress-bar .progress-number, .progress-bar-container.small .progress-bar .progress-type {
+    margin-top: -22px;
+}
+
 .progress-bar-container.no-bg {
-    background: none !important; }
+    background: none !important;
+}
+
 .progress-bar-container.extra-small {
-    height: 2px; }
+    height: 2px;
+}
+
 .progress-bar-container.extra-small .progress-bar {
-    padding: 0; }
+    padding: 0;
+}
+
 .progress-bar-container.extra-small .progress-title {
     margin-left: 0;
-    margin-top: -20px; }
-.progress-bar-container.extra-small .progress-bar .progress-number,
-.progress-bar-container.extra-small .progress-bar .progress-type {
-    margin-top: -18px; }
+    margin-top: -20px;
+}
+
+.progress-bar-container.extra-small .progress-bar .progress-number, .progress-bar-container.extra-small .progress-bar .progress-type {
+    margin-top: -18px;
+}
+
 .progress-bar-container.transparent {
-    background: none !important; }
+    background: none !important;
+}
+
 .progress-bar-container.transparent .progress-bar {
-    background-color: rgba(0, 0, 0, 0.35); }
-.progress-bar-container.transparent.title-up .progress-bar .progress-title,
-.progress-bar-container.transparent.title-up .progress-bar .progress-number,
-.progress-bar-container.transparent.title-up .progress-bar .progress-type {
-    color: #fff; }
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.progress-bar-container.transparent.title-up .progress-bar .progress-title, .progress-bar-container.transparent.title-up .progress-bar .progress-number, .progress-bar-container.transparent.title-up .progress-bar .progress-type {
+    color: #fff;
+}
+
+/*skill - profile*/
+#skill .column img {
+    max-width: 100%;
+}
+#skill .column .card .row {
+    background: #fff;
+    margin: -5px;
+    padding: 7% 0 0 0;
+    border-radius: 10px;
+    box-shadow: 5px 7px 8px rgba(0,0,0,0.04);
+}
+
+#skill .column .skill.card .row{
+    padding: 4% 0 0 0;
+}
+
+#skill .sec-title{
+    font-size: 13px;
+    color: #aaa;
+    padding-bottom: 7%;
+}
+
+#skill .column .profile .my-id {
+    width: 35%;
+    height: 35%;
+    border-radius: 100%;
+    margin: 0 auto;
+}
+
+#skill .column .profile .info .name {
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+    margin-top: 5%;
+}
+
+#skill .column .profile .info .age {
+    text-align: center;
+    color: #aaa;
+    font-size: 12px;
+    margin-top: 2%;
+}
+
+#skill .column .profile .box {
+    background: #f3f3f3;
+    padding: 6% 5% 5% 7%;
+    margin-top: 5%;
+    border-radius: 0 0 10px 10px;
+}
+
+#skill .column .profile .info .ico {
+    font-size: 11px;
+    vertical-align: middle;
+    color: #aaa;
+}
+
+#skill .column .profile .info .ico + .ico{
+    margin-top: 6%;
+}
+
+#skill .column .profile .info .ico i {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: super;
+    margin-right: 3%;
+}
+
+#skill .column .profile .info .ico i img {
+    width: 100%;
+}
 
 @media (max-width: 992px) {
+    #myBtn{
+        width: 7vw;
+        right: 7%;
+        bottom: 7%;
+    }
+    #wrap .blob.one{
+        width: 57vw;
+        height: 72vw;
+        transform: translate(-50%, -49%) rotate(51deg);
+    }
+    #wrap .blob.two{
+
+        display: none;
+
+    }
+    #wrap .blob.three{
+        transform: translate(60%, 38%) rotate(47deg);
+    }
+    .mainText{
+        font-size: 12vw;
+    }
     .work {
         width:100%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
     .work .box {
-        width: 400px;
+        display: flex;
+        flex-wrap: nowrap;
+        margin-bottom: 15%;
     }
-
+    .work .box .con{
+        width:70%;
+    }
+    .work .box[data-text="odd"] .con{
+        width: 100%;
+        top: 59%;
+        left: 10%;
+    }
     #menu-overlay ul li a {
         font-size: 10vw
     }
+
+    .foot-info{
+        padding: 8% 9%;
+    }
+    .foot-info .map{
+        margin-top:8%;
+    }
+
+
+    #footer .add-info{
+        padding: 0 9% 5%;
+        height: auto;
+    }
+
+    #footer #text{
+        font-size: 12vw;
+    }
+
+    #footer .date-area{
+        display:none;
+    }
+
 }
 
 @media (max-width: 768px) {
+    #myBtn{
+        width: 15vw;
+        right: 13%;
+        bottom: 5%;
+    }
+
+    #toggleIcon{
+        top: 4%;
+    }
+
+    #wrap .blob.three{
+        display: none;
+    }
+
+    #menu-overlay ul li a{
+        font-size: 7vw;
+    }
+
+    #menu-overlay ul li a span{
+        font-size:1rem;
+    }
+
+    .main .work{
+        padding: 0 5%;
+    }
+
     .work .box {
-        max-width:300px;
         flex-direction: column;
         height: auto;
     }
@@ -911,8 +1106,10 @@ sub page style start
 
     .work .box .img-box, .work .box:hover .img-box {
         width: 100%;
-        height: 200px;
+        height: auto;
+        max-height: 350px;
         left: 0;
+        overflow: hidden;
     }
 
     .work .box .img-box img, .work .box:hover .img-box img {
@@ -920,11 +1117,21 @@ sub page style start
     }
 
     .work .box .con {
-        position: relative;
-        width: 100%;
+        position: relative !important;
+        width: 100% !important;
+        top: auto !important;
+        left: auto !important;
+        bottom: auto !important;
+        right: auto !important;
+    }
+    .foot-info{
+        padding: 5% 1%;
     }
 
     .foot-info .map {
         display: none;
+    }
+    .foot-text{
+        font-size: 9px;
     }
 }
