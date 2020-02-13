@@ -1,4 +1,23 @@
-/*top button*/
+/*today time*/
+function TodayTime(){
+    let day = new Date();
+    let hh = day.getHours();
+    let mm = day.getMinutes();
+    if(mm < 10){
+        document.getElementById('today-date').innerHTML = hh + ':' + '0' + mm;
+    }else{
+        document.getElementById('today-date').innerHTML = hh + ':' + mm;
+    }
+}
+
+let timerId = null;
+
+function StartClock() {
+    timerId = setTimeout(StartClock, 1000);
+    TodayTime();
+}
+StartClock();
+
 //Get the button:
 mybutton = document.getElementById("myBtn");
 
@@ -42,26 +61,6 @@ function rotator() {
     word[i].style.display = 'initial';
 }
 setInterval(rotator, 900);
-
-/*today time*/
-function TodayTime(){
-    let day = new Date();
-    let hh = day.getHours();
-    let mm = day.getMinutes();
-    if(mm < 10){
-        document.getElementById('today-date').innerHTML = hh + ':' + '0' + mm;
-    }else{
-        document.getElementById('today-date').innerHTML = hh + ':' + mm;
-    }
-}
-
-let timerId = null;
-
-function StartClock() {
-    timerId = setTimeout(StartClock, 1000);
-    TodayTime();
-}
-StartClock();
 
 /*section counting*/
 function secCount() {

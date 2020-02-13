@@ -93,7 +93,7 @@ input::-webkit-input-placeholder {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #3f6fdf;
+    background: #f3c6bd;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,7 +130,7 @@ input::-webkit-input-placeholder {
     font-weight: 600;
     text-transform: capitalize;
     display: inline-block;
-    color: #ffffff;
+    color: #3f6fdf;
     letter-spacing: 0.3rem;
 }
 
@@ -145,7 +145,7 @@ input::-webkit-input-placeholder {
     left: 0;
     width: 100%;
     height: 8px;
-    background: #fbd3d3;
+    background: #f3c6bd;
     transform: translateY(-50%) scaleX(0);
     transform-origin: right;
     transition: .5s transform;
@@ -155,6 +155,22 @@ input::-webkit-input-placeholder {
     transform: translateY(-50%) scaleX(1);
     transform-origin: left;
     transition: .5s transform;
+}
+
+#menu-overlay .bg-txt {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#menu-overlay .bg-txt p {
+    font-family: 'Permanent Marker', cursive !important;
+    color: #ffff57;
+    opacity: 0.4;
+    font-size: 13vw;
+    text-align: center;
 }
 
 #toggleIcon {
@@ -315,6 +331,7 @@ input::-webkit-input-placeholder {
     height: auto;
     transform: translate(-50%, -50%);
     font-weight: bold;
+    /*font-family: "Freight Neo Pro" !important;*/
 }
 
 .bg .ver {
@@ -325,7 +342,7 @@ input::-webkit-input-placeholder {
     bottom: 5%;
 }
 
-.bg .myName{
+.bg .myName {
     color: rgba(255,255,255,0.5);
     font-size: 2rem;
     position: absolute;
@@ -522,6 +539,9 @@ input::-webkit-input-placeholder {
     border: 1px solid #f3c6bd;
     color: #222;
     padding: 3%;
+    /*mobile*/
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
 }
 
 .foot-info .form .form-elements .pure-group textarea {
@@ -642,6 +662,7 @@ sub page style start
 
 .sub-title h2 {
     font-family: 'DM Serif Display', serif !important;
+    /*font-family: "Freight Neo Pro" !important;*/
     font-size: 4rem;
     text-transform: capitalize;
     z-index: 100;
@@ -695,11 +716,11 @@ sub page style start
     color: #666;
 }
 
-#workPlace, #skill {
+#workPlace {
     padding: 8% 0;
 }
 
-#workPlace .row, #skill {
+#workPlace .row {
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -882,7 +903,7 @@ Base Colors
     padding: 0;
     /*background: rgb(255,119,70);*/
     /*background: linear-gradient(125deg, rgba(255,119,70,1) 0%, rgba(63,111,223,1) 100%);*/
-    background:#3f6fdf;
+    background: #3f6fdf;
     border-radius: 5px;
 }
 
@@ -929,168 +950,315 @@ Base Colors
 }
 
 /*skill - profile*/
+#skill {
+    /* max-width: 1200px; */
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 2% 10% 5% 10%;
+}
+
 #skill .column img {
     max-width: 100%;
 }
+
 #skill .column .card .row {
     background: #fff;
-    margin: -5px;
-    padding: 7% 0 0 0;
+    margin: 0;
+    padding: 0;
     border-radius: 10px;
     box-shadow: 5px 7px 8px rgba(0,0,0,0.04);
 }
 
-#skill .column .skill.card .row{
-    padding: 4% 0 0 0;
+#skill .column .skill.card .row {
+    padding: 4% 2% 1% 2%;
 }
 
-#skill .sec-title{
+#skill .sec-title {
     font-size: 13px;
     color: #aaa;
     padding-bottom: 7%;
 }
 
-#skill .column .profile .my-id {
-    width: 35%;
-    height: 35%;
-    border-radius: 100%;
-    margin: 0 auto;
+#skill .column .profile {
+    background: #fff;
+    padding: 10% 3%;
+    border-radius: 12px;
 }
 
-#skill .column .profile .info .name {
+#skill .column .profile .my-id {
+    text-align: center;
+}
+
+#skill .column .profile .my-id img {
+    width: 90px;
+    height: 90px;
+}
+
+#skill .column .name {
     text-align: center;
     font-size: 14px;
     color: #aaa;
     margin-top: 5%;
 }
 
-#skill .column .profile .info .age {
-    text-align: center;
-    color: #aaa;
+#skill .column .box {
+    margin-top: 15%;
+    padding: 0 10%;
+}
+
+#skill .column .info {
+    margin-top: 15%;
+}
+
+#skill .column .info .sns {
+    overflow: hidden;
+    padding: 0 10%;
+}
+
+#skill .column .info .sns li {
+    width: 33.33%;
+    float: left;
+    height: 55px;
+    padding-top: 4px;
+}
+
+#skill .column .info .sns li + li {
+    border-left: 1px solid #eee;
+}
+
+#skill .column .info .sns li a {
+    display: block;
+    color: #666;
     font-size: 12px;
-    margin-top: 2%;
+    text-align: center;
+    text-decoration: none;
 }
 
-#skill .column .profile .box {
-    background: #f3f3f3;
-    padding: 6% 5% 5% 7%;
-    margin-top: 5%;
-    border-radius: 0 0 10px 10px;
+#skill .column .info .sns li a i {
+    display: block;
+    width: 23px;
+    height: 23px;
+    margin: 0 auto 12px;
 }
 
-#skill .column .profile .info .ico {
-    font-size: 11px;
-    vertical-align: middle;
+#skill .column .info .sns li a i img {
+}
+
+#skill .column .info .ico {
     color: #aaa;
+    font-size: 14px;
 }
 
-#skill .column .profile .info .ico + .ico{
-    margin-top: 6%;
+#skill .column .info .ico + .ico {
+    margin-top: 12%;
 }
 
-#skill .column .profile .info .ico i {
-    width: 20px;
-    height: 20px;
+#skill .column .info .ico i {
+    width: 35px;
+    height: 35px;
     display: inline-block;
-    vertical-align: super;
-    margin-right: 3%;
+    vertical-align: middle;
+    margin-right: 6%;
 }
 
-#skill .column .profile .info .ico i img {
+#skill .column .info .ico i img {
     width: 100%;
 }
 
+#skill .working {
+    position: absolute;
+    top: 6%;
+    left: 12%;
+    width: 80%;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+#skill .working span {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    font-size: 1rem;
+    animation: marAni 4s linear infinite;
+}
+
+.careerHistory {
+    width: 100%;
+    list-style: none;
+}
+
+.careerHistory li {
+}
+
+.careerHistory li:first-child {
+    border: 0 none;
+}
+
+.careerHistory li a {
+    height: 20px;
+    line-height: 20px;
+    display: block;
+    text-decoration: none;
+    color: #000;
+}
+
+.careerHistory li p {
+    color: #f00;
+}
+
+.section .career {
+    background: #fff;
+    margin: 3% 1.5% 1.5% 1.5%;
+    width: 97%;
+    border-radius: 10px;
+    padding: 3%;
+}
+
+#skill .career .sec-title {
+    padding-bottom: 3%;
+}
+
+.career .careerHistory {
+}
+
+@keyframes marAni {
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
 @media (max-width: 992px) {
-    #myBtn{
+    #menu-overlay .bg-txt p {
+        display:none;
+    }
+
+    #myBtn {
         width: 7vw;
         right: 7%;
         bottom: 7%;
     }
-    #wrap .blob.one{
+
+    #wrap .blob.one {
         width: 57vw;
         height: 72vw;
         transform: translate(-50%, -49%) rotate(51deg);
     }
-    #wrap .blob.two{
 
-        display: none;
-
-    }
-    #wrap .blob.three{
+    #wrap .blob.three {
         transform: translate(60%, 38%) rotate(47deg);
     }
-    .mainText{
+
+    .mainText {
         font-size: 12vw;
     }
+
     .work {
-        width:100%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     .work .box {
         display: flex;
         flex-wrap: nowrap;
         margin-bottom: 15%;
     }
-    .work .box .con{
-        width:70%;
+
+    .work .box .con {
+        width: 70%;
     }
-    .work .box[data-text="odd"] .con{
+
+    .work .box[data-text="odd"] .con {
         width: 100%;
         top: 59%;
         left: 10%;
     }
+
     #menu-overlay ul li a {
         font-size: 10vw
     }
 
-    .foot-info{
+    .foot-info {
         padding: 8% 9%;
     }
-    .foot-info .map{
-        margin-top:8%;
+
+    .foot-info .map {
+        margin-top: 8%;
     }
 
-
-    #footer .add-info{
+    #footer .add-info {
         padding: 0 9% 5%;
         height: auto;
     }
 
-    #footer #text{
+    #footer #text {
         font-size: 12vw;
     }
 
-    #footer .date-area{
-        display:none;
+    #footer .date-area {
+        display: none;
     }
-
 }
+
 @media (max-width: 768px) {
-    #myBtn{
+    #myBtn {
         width: 15vw;
         right: 13%;
         bottom: 5%;
     }
 
-    #toggleIcon{
-        top: 4%;
+    #toggleIcon {
+        top: 2%;
     }
 
-    #wrap .blob.three{
-        display: none;
+    #toggleIcon span {
+        height: 3px;
     }
 
-    #menu-overlay ul li a{
+    #wrap .blob.one {
+        width: 74%;
+        height: 39%;
+    }
+
+    #wrap .blob.two {
+        width: 39%;
+        height: 16%;
+    }
+
+    #wrap .blob.three {
+        width: 26%;
+        height: 12%;
+    }
+
+    #menu-overlay ul li a {
         font-size: 7vw;
     }
 
-    #menu-overlay ul li a span{
-        font-size:1rem;
+    #menu-overlay ul li a span {
+        font-size: 1rem;
     }
 
-    .main .work{
+    .bg .myName {
+        font-size: 1rem;
+        top: 4%;
+        left: 6%;
+    }
+
+    .bg .ver {
+        font-size: 1rem;
+        right: 6%;
+    }
+
+    .bg .ver span {
+        height: 1px;
+        width: 19px;
+        margin-right: 9px;
+    }
+
+    .main .work {
         padding: 0 5%;
     }
 
@@ -1123,14 +1291,16 @@ Base Colors
         bottom: auto !important;
         right: auto !important;
     }
-    .foot-info{
+
+    .foot-info {
         padding: 5% 1%;
     }
 
     .foot-info .map {
         display: none;
     }
-    .foot-text{
+
+    .foot-text {
         font-size: 9px;
     }
 }

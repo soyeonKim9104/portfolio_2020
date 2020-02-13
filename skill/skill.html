@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/clock.css">
+    <link href="//db.onlinewebfonts.com/c/90fe831fa65b9632a4790c1a1732e9ab?family=Freight+Neo+Pro" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 
@@ -21,17 +23,20 @@
 </div>
 
 <div id="skill">
-    <div class="column">
-        <div class="profile card col-md-3">
+    <div class="column col-md-3">
+        <div class="profile">
             <div class="row">
-                <div class="my-id"><img src="../images/icon-me.png" alt="img"></div>
+                <div class="my-id">
+                    <img src="../images/icon-me.png" alt="img">
+                    <p class="name">Kim So Yeon</p>
+                    <p class="age">Front-end / 30</p>
+                </div>
                 <div class="info">
-                    <div class="block">
-                        <p class="name">Kim So Yeon</p>
-                    </div>
-                    <div class="block">
-                        <p class="age">Front-end / 30</p>
-                    </div>
+                    <ul class="sns">
+                        <li><a href="https://www.behance.net/soyeonkim0404" target="_blank"><i><img src="../images/icon-phone.png"></i> behance</a></li>
+                        <li><a href="https://www.pinterest.co.kr/soyean7979/" target="_blank"><i><img src="../images/icon-phone.png"></i> pinterest</a></li>
+                        <li><a href="" target="_blank"><i><img src="../images/icon-phone.png"></i> instagram</a></li>
+                    </ul>
                     <div class="box">
                         <div class="ico"><i><img src="../images/icon-phone.png"></i> +82 10-2685-0404</div>
                         <div class="ico"><i><img src="../images/icon-home.png"></i> Seoul Seodaemun-gu, Seoul 100</div>
@@ -39,83 +44,121 @@
                 </div>
             </div>
         </div>
-        <div class="skill card col-md-6">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="sec-title">coding skill</div>
-                    <div class="skill-bar">
-                        <div class="progress-bar-container title-up small color">
-                            <div class="progress-bar" data-percent="98" data-delay="0" data-type="%">
-                                <div class="progress-title">HTML/CSS</div>
-                            </div>
-                        </div>
-
-                        <div class="progress-bar-container title-up small color">
-                            <div class="progress-bar" data-percent="75" data-delay="50" data-type="%">
-                                <div class="progress-title">Javascript</div>
-                            </div>
-                        </div>
-
-                        <div class="progress-bar-container title-up small color">
-                            <div class="progress-bar" data-percent="80" data-delay="100" data-type="%">
-                                <div class="progress-title">jQuery</div>
-                            </div>
-                        </div>
-
-                        <div class="progress-bar-container title-up small color">
-                            <div class="progress-bar" data-percent="40" data-delay="150" data-type="%">
-                                <div class="progress-title">Vue.js</div>
-                            </div>
-                        </div>
-
-                        <div class="progress-bar-container title-up small color">
-                            <div class="progress-bar" data-percent="10" data-delay="200" data-type="%">
-                                <div class="progress-title">react</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="sec-title">design & etc skill</div>
-                    <div class="skill-bar">
-                        <div class="progress-bar-container title-up small color">
-                            <div class="progress-bar" data-percent="96" data-delay="0" data-type="%">
-                                <div class="progress-title">Photoshop</div>
-                            </div>
-                        </div>
-
-                        <div class="progress-bar-container title-up small color">
-                            <div class="progress-bar" data-percent="75" data-delay="50" data-type="%">
-                                <div class="progress-title">Illustrator</div>
-                            </div>
-                        </div>
-
-                        <div class="progress-bar-container title-up small color">
-                            <div class="progress-bar" data-percent="35" data-delay="100" data-type="%">
-                                <div class="progress-title">After Effect</div>
-                            </div>
-                        </div>
-
-                        <div class="progress-bar-container title-up small color">
-                            <div class="progress-bar" data-percent="50" data-delay="150" data-type="%">
-                                <div class="progress-title">Microsoft</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="calendar card col-md-3">
-            <div class="row">
-                <div id="app" style="display:none;">
-                    <v-calendar title-position="left" :attributes='attrs'></v-calendar>
-                    <!--<v-date-picker :mode='mode' v-model='selectedDate' />-->
-                </div>
-            </div>
-        </div>
     </div>
-    <div class="column">
-        <div class="career card col-md-12"></div>
+    <div class="column col-md-9">
+        <div class="section">
+            <div class="skill card col-md-8">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="sec-title">coding skill</div>
+                        <div class="skill-bar">
+                            <div class="progress-bar-container title-up small color">
+                                <div class="progress-bar" data-percent="90" data-delay="0" data-type="%">
+                                    <div class="progress-title">HTML/CSS</div>
+                                </div>
+                            </div>
+
+                            <div class="progress-bar-container title-up small color">
+                                <div class="progress-bar" data-percent="75" data-delay="50" data-type="%">
+                                    <div class="progress-title">Javascript</div>
+                                </div>
+                            </div>
+
+                            <div class="progress-bar-container title-up small color">
+                                <div class="progress-bar" data-percent="80" data-delay="100" data-type="%">
+                                    <div class="progress-title">jQuery</div>
+                                </div>
+                            </div>
+
+                            <div class="progress-bar-container title-up small color">
+                                <div class="progress-bar" data-percent="10" data-delay="150" data-type="%">
+                                    <div class="progress-title">Vue.js</div>
+                                </div>
+                            </div>
+
+                            <div class="progress-bar-container title-up small color">
+                                <div class="progress-bar" data-percent="5" data-delay="200" data-type="%">
+                                    <div class="progress-title">react</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="sec-title">design & etc skill</div>
+                        <div class="skill-bar">
+                            <div class="progress-bar-container title-up small color">
+                                <div class="progress-bar" data-percent="90" data-delay="0" data-type="%">
+                                    <div class="progress-title">Photoshop</div>
+                                </div>
+                            </div>
+
+                            <div class="progress-bar-container title-up small color">
+                                <div class="progress-bar" data-percent="75" data-delay="50" data-type="%">
+                                    <div class="progress-title">Illustrator</div>
+                                </div>
+                            </div>
+
+                            <div class="progress-bar-container title-up small color">
+                                <div class="progress-bar" data-percent="35" data-delay="100" data-type="%">
+                                    <div class="progress-title">After Effect</div>
+                                </div>
+                            </div>
+
+                            <div class="progress-bar-container title-up small color">
+                                <div class="progress-bar" data-percent="50" data-delay="150" data-type="%">
+                                    <div class="progress-title">Microsoft</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="calendar card col-md-4">
+                <div class="row">
+                    <div class="working">
+                        <span>나는 열일중... 나는 열일중... 나는 열일중...</span>
+                    </div>
+                    <div class="clock">
+                        <div class="hour">
+                            <div class="hr" id="hr"></div>
+                        </div>
+                        <div class="min">
+                            <div class="mn" id="mn"></div>
+                        </div>
+                        <div class="sec">
+                            <div class="sc" id="sc"></div>
+                        </div>
+                    </div>
+                    <div id="weekPrint"></div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="career card col-md-12">
+                <div class="sec-title">career history</div>
+                <ul class="careerHistory">
+                    <li>
+                        <a href="#">[클리어픽스] 워드프레스 LG 이노텍</a>
+                        <p>워드프레스로 진행된 브랜드 사이트로 입사 후 막바지에 들어간 프로젝트입니다.</p>
+                    </li>
+                    <li>
+                        <a href="#">[클리어픽스] PC, Mobile 적응형 딴지일보</a>
+                        <p>딴지일보의 경우 PC와 Mobile 각각의 최적화 화면을 위해 적응형 홈페이지로 진행하였습니다. 컨셉 자체가 신문을 보는 듯한 느낌을 주고 싶어해 화면단 전체적으로 블랙 & 화이트로 진행되었습니다.
+                            썸네일이나 뉴스 이미지의 경우 디폴트로 블랙 화면에서 hover 시 컬러로 변경되는 화면단이었습니다. 크게 메인, 카테고리 목록, 뉴스 상세 페이지로 이루어졌으며, 게시판 형의 커뮤니티 사이트입니다.
+                            기존의 제목과 게시글이 있는 기본 게시판형과, 새로운 ui 매거진형 두가지 레이아웃으로 진행해 sort로 유저가 선택할 수 있게 리뉴얼 하였습니다.
+                        </p>
+                    </li>
+                    <li>
+                        <a href="#">토글3</a>
+                        <p>테스트3</p>
+                    </li>
+                    <li>
+                        <a href="#">토글4</a>
+                        <p>테스트4</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -123,7 +166,51 @@
 <script src="../js/jquery-1.10.2.min.js"></script>
 <script src="../js/functions.js"></script>
 <script src="../js/plugins.js"></script>
-<!--<script src='https://unpkg.com/vue/dist/vue.js'></script>-->
+
+<script>
+    /*clock js*/
+    const deg = 6;
+    const hr = document.querySelector('#hr');
+    const mn = document.querySelector('#mn');
+    const sc = document.querySelector('#sc');
+
+    setInterval(() => {
+        let day = new Date();
+        console.log();
+        let hh = day.getHours() * 30;
+        let mm = day.getMinutes() * deg;
+        let ss = day.getSeconds() * deg;
+
+        hr.style.transform = `rotateZ(${hh+(mm/12)}deg)`;
+        mn.style.transform = `rotateZ(${mm}deg)`;
+        sc.style.transform = `rotateZ(${ss}deg)`;
+    });
+
+    /*today day - skill page*/
+    function TodayDay(){
+        let day = new Date();
+        let year = day.getFullYear();
+        let month = day.getMonth()+1;
+        let date = day.getDate();
+        let dateWeek = day.getDay();
+        let week = new Array('일요일','월요일','화요일','수요일','목요일','금요일','토요일');
+        let weekLabel = week[dateWeek];
+        document.getElementById('weekPrint').innerHTML = year + '년' + '&nbsp;' + month + '월' + '&nbsp;' + date +'일' + '&nbsp;' + weekLabel;
+    }
+
+    TodayDay();
+
+    $(document).ready(function(){
+        $(".careerHistory p").hide();
+        $(".careerHistory li a").on('click', function(){
+            $(this).next().slideToggle(300);
+            $(".careerHistory li a").not(this).next().slideUp(300);
+            return false;
+        });
+        $(".careerHistory li a").eq(0).trigger("click");
+    });
+
+</script>
 
 </body>
 </html>
