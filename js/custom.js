@@ -16,7 +16,6 @@ function StartClock() {
     timerId = setTimeout(StartClock, 1000);
     TodayTime();
 }
-StartClock();
 
 //Get the button:
 mybutton = document.getElementById("myBtn");
